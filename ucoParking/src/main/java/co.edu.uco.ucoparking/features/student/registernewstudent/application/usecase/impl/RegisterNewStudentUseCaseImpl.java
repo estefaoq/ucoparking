@@ -4,7 +4,7 @@ import co.edu.uco.ucoparking.features.student.registernewstudent.application.use
 import co.edu.uco.ucoparking.features.student.registernewstudent.application.usecase.domain.RegisterNewStudentDomain;
 import co.edu.uco.ucoparking.features.student.registernewstudent.application.usecase.impl.mapper.RegisterNewStudentDomainToStudentEntityMapper;
 import co.edu.uco.ucoparking.infraestructure.persistence.repository.StudentRepository;
-import co.edu.uco.ucoparking.infraestructure.persistence.repository.adapter.sql.jpa.entity.StudentEntity;
+import co.edu.uco.ucoparking.infraestructure.persistence.repository.adpter.sql.jpa.entity.StudentEntity;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 

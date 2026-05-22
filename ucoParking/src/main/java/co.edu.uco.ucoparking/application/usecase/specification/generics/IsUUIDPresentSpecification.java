@@ -1,7 +1,7 @@
 package co.edu.uco.ucoparking.application.usecase.specification.generics;
 
-import co.edu.uco.ucoparking.crosscuting.helper.UUIDHelper;
-import co.edu.uco.ucoparking.crosscuting.specification.base.Specification;
+import co.edu.uco.ucoparking.crosscutting.helper.UUIDHelper;
+import co.edu.uco.ucoparking.crosscutting.specification.base.Specification;
 
 import java.util.UUID;
 

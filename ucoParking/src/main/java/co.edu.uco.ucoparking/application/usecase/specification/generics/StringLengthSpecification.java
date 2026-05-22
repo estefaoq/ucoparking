@@ -1,7 +1,7 @@
 package co.edu.uco.ucoparking.application.usecase.specification.generics;
 
-import co.edu.uco.ucoparking.crosscuting.helper.TextHelper;
-import co.edu.uco.ucoparking.crosscuting.specification.base.Specification;
+import co.edu.uco.ucoparking.crosscutting.helper.TextHelper;
+import co.edu.uco.ucoparking.crosscutting.specification.base.Specification;
 
 public class StringLengthSpecification extends Specification<String> {
 

@@ -3,7 +3,7 @@ package co.edu.uco.ucoparking.application.usecase.rule.generics;
 import co.edu.uco.ucoparking.application.usecase.rule.Rule;
 import co.edu.uco.ucoparking.application.usecase.specification.generics.IsMandatorySpecification;
 import co.edu.uco.ucoparking.application.usecase.specification.generics.IsStringValuePresentSpecification;
-import co.edu.uco.ucoparking.crosscuting.exception.UcoParkingException;
+import co.edu.uco.ucoparking.crosscutting.exception.UcoParkingException;
 
 public class IsStringPresentRule  implements Rule{
     private static final Rule instance = new IsStringPresentRule();
