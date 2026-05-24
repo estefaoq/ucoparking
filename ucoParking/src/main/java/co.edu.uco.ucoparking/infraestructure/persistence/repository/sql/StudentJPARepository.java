@@ -4,8 +4,10 @@ import co.edu.uco.ucoparking.infraestructure.persistence.repository.sql.entity.S
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 
+import java.util.Optional;
 import java.util.UUID;
 
 @Repository
 public interface StudentJPARepository extends JpaRepository<StudentJpaEntity, UUID> {
+
 }

@@ -1,4 +1,4 @@
-package co.edu.uco.ucoparking.infraestructure.persistence.repository;
+package co.edu.uco.ucoparking.infraestructure.persistence.repository.r2dbc;
 
 import co.edu.uco.ucoparking.infraestructure.persistence.entity.ParkingSpaceEntity;
 import org.springframework.data.repository.reactive.ReactiveCrudRepository;
@@ -10,6 +10,7 @@ import reactor.core.publisher.Mono;
 
 public interface ParkingSpaceRepository extends ReactiveCrudRepository<ParkingSpaceEntity, String> {
     Mono<ParkingSpaceEntity> findBySpaceNumber(Integer spaceNumber);
+    Mono<ParkingSpaceEntity> findByOccupiedByStudentIdAndStatus(String occupiedByStudentId, String status);
     Flux<ParkingSpaceEntity> findByStatus(String status);
     Flux<ParkingSpaceEntity> findAllByOrderBySpaceNumber();
 

@@ -1,5 +1,8 @@
 package co.edu.uco.ucoparking.infraestructure.persistence.repository.adpter.sql.jpa.entity;
 
+import jakarta.persistence.Column;
+import jakarta.persistence.Id;
+
 import java.util.UUID;
 
 public class InstitutionEntity {

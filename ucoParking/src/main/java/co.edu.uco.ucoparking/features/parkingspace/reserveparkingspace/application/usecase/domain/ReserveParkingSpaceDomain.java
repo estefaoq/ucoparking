@@ -6,18 +6,19 @@ public class ReserveParkingSpaceDomain {
 
     private UUID id;
     private Integer spaceNumber;
-    private UUID studentId;
+    private String studentId;
+    private String studentName;
     private String status;
 
-    public ReserveParkingSpaceDomain(Integer spaceNumber, UUID studentId, String status) {
+    public ReserveParkingSpaceDomain(Integer spaceNumber, String studentId, String studentName, String status) {
         super();
         generateId();
         setSpaceNumber(spaceNumber);
         setStudentId(studentId);
+        setStudentName(studentName);
         setStatus(status);
     }
 
-    // Validaciones de integridad y formato en los setters:
     private void setSpaceNumber(Integer spaceNumber) {
         if (spaceNumber == null || spaceNumber <= 0) {
             throw new IllegalArgumentException("El número de espacio es obligatorio y debe ser mayor a 0");
@@ -25,11 +26,18 @@ public class ReserveParkingSpaceDomain {
         this.spaceNumber = spaceNumber;
     }
 
-    private void setStudentId(UUID studentId) {
-        if (studentId == null) {
+    private void setStudentId(String studentId) {
+        if (studentId == null || studentId.isBlank()) {
             throw new IllegalArgumentException("El ID del estudiante es obligatorio");
         }
         this.studentId = studentId;
+    }
+
+    private void setStudentName(String studentName) {
+        if (studentName == null || studentName.isBlank()) {
+            throw new IllegalArgumentException("El nombre del estudiante es obligatorio");
+        }
+        this.studentName = studentName;
     }
 
     private void setStatus(String status) {
@@ -51,8 +59,12 @@ public class ReserveParkingSpaceDomain {
         return spaceNumber;
     }
 
-    public UUID getStudentId() {
+    public String getStudentId() {
         return studentId;
+    }
+
+    public String getStudentName() {
+        return studentName;
     }
 
     public String getStatus() {

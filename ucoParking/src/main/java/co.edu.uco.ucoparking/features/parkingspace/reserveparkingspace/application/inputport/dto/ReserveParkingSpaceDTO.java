@@ -6,15 +6,17 @@ public class ReserveParkingSpaceDTO {
 
     private UUID id;
     private Integer spaceNumber;
-    private UUID studentId;
+    private String studentId;
+    private String studentName;
     private String status;
 
     public ReserveParkingSpaceDTO() {
     }
 
-    public ReserveParkingSpaceDTO(Integer spaceNumber, UUID studentId, String status) {
+    public ReserveParkingSpaceDTO(Integer spaceNumber, String studentId, String studentName, String status) {
         this.spaceNumber = spaceNumber;
         this.studentId = studentId;
+        this.studentName = studentName;
         this.status = status;
     }
 
@@ -34,12 +36,20 @@ public class ReserveParkingSpaceDTO {
         this.spaceNumber = spaceNumber;
     }
 
-    public UUID getStudentId() {
+    public String getStudentId() {
         return studentId;
     }
 
-    public void setStudentId(UUID studentId) {
+    public void setStudentId(String studentId) {
         this.studentId = studentId;
+    }
+
+    public String getStudentName() {
+        return studentName;
+    }
+
+    public void setStudentName(String studentName) {
+        this.studentName = studentName;
     }
 
     public String getStatus() {

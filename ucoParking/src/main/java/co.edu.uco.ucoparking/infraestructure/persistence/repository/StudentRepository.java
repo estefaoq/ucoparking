@@ -8,7 +8,7 @@ import java.util.UUID;
 
 public interface StudentRepository {
 
-    void create(StudentEntity entity);
+    Mono<Void> create(StudentEntity entity);
 
     StudentEntity findById(UUID id);
 

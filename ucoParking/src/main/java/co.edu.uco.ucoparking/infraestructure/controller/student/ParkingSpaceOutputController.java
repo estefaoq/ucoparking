@@ -7,7 +7,7 @@ import co.edu.uco.ucoparking.application.outputport.ParkingSpaceOutputPort;
 import co.edu.uco.ucoparking.infraestructure.controller.dto.ParkingSpaceDTO;
 
 @RestController
-@RequestMapping("/uco-parking/v1/students")
+@RequestMapping("/v1/students")
 public class ParkingSpaceOutputController {
 
     private final ParkingSpaceOutputPort parkingSpaceOutputPort;
@@ -34,6 +34,12 @@ public class ParkingSpaceOutputController {
         return parkingSpaceOutputPort.subscribeToParkingSpaceUpdates(spaceNumber);
     }
 
+    @GetMapping(value = "/stream", produces = org.springframework.http.MediaType.APPLICATION_NDJSON_VALUE)
+    @CrossOrigin(origins = "*")
+    public Flux<ParkingSpaceDTO> streamAllParkingSpaceUpdates() {
+        return parkingSpaceOutputPort.subscribeToAllParkingSpaceUpdates();
+    }
+
     @GetMapping("/status/occupied")
     @CrossOrigin(origins = "*")
     public Flux<ParkingSpaceDTO> getOccupiedSpaces() {
@@ -45,5 +51,4 @@ public class ParkingSpaceOutputController {
     public Flux<ParkingSpaceDTO> getAvailableSpaces() {
         return parkingSpaceOutputPort.getAvailableParkingSpaces();
     }
-
 }

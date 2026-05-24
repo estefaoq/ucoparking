@@ -9,6 +9,7 @@ public interface ParkingSpaceOutputPort {
     Flux<ParkingSpaceDTO> getAllParkingSpaces();
     Mono<ParkingSpaceDTO> getParkingSpaceByNumber(Integer spaceNumber);
     Flux<ParkingSpaceDTO> subscribeToParkingSpaceUpdates(Integer spaceNumber);
+    Flux<ParkingSpaceDTO> subscribeToAllParkingSpaceUpdates();
     Flux<ParkingSpaceDTO> getOccupiedParkingSpaces();
     Flux<ParkingSpaceDTO> getAvailableParkingSpaces();
 }

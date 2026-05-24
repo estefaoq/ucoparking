@@ -4,11 +4,12 @@ import jakarta.persistence.*;
 
 @Entity
 @Table(name = "ParkingSpaces")
-
+@org.springframework.data.relational.core.mapping.Table("ParkingSpaces")
 public class ParkingSpaceEntity {
 
     @Id
     @GeneratedValue(strategy = GenerationType.UUID)
+    @org.springframework.data.annotation.Id
     private String id;
 
     @Column(nullable = false, unique = true)
@@ -90,5 +91,4 @@ public class ParkingSpaceEntity {
     public void setUpdatedAt(Long updatedAt) {
         this.updatedAt = updatedAt;
     }
-
 }
