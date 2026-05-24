@@ -1,10 +1,11 @@
 package co.edu.uco.ucoparking.application.usecase.mapper;
 
+import org.mapstruct.Mapper;
+import org.mapstruct.Mapping;
+
 import co.edu.uco.ucoparking.features.student.registernewstudent.application.inputport.dto.RegisterNewStudentDTO;
 import co.edu.uco.ucoparking.features.student.registernewstudent.application.usecase.domain.RegisterNewStudentDomain;
 import co.edu.uco.ucoparking.infraestructure.persistence.repository.adpter.sql.jpa.entity.StudentEntity;
-import org.mapstruct.Mapper;
-import org.mapstruct.Mapping;
 
 @Mapper(componentModel = "spring")
 public interface RegisterNewStudentDomainDtoStudentEntityMapper extends MapperDomain<RegisterNewStudentDomain, RegisterNewStudentDTO>{

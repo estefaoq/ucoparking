@@ -13,6 +13,7 @@ import co.edu.uco.ucoparking.features.student.registernewstudent.application.inp
 import co.edu.uco.ucoparking.features.student.registernewstudent.application.inputport.dto.RegisterNewStudentDTO;
 import co.edu.uco.ucoparking.infraestructure.controller.Response;
 
+
 @RestController
 @RequestMapping("/uco-parking/v1/students")
 public class StudentController {
