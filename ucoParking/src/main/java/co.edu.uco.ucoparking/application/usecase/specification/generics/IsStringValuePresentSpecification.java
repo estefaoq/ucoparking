@@ -7,6 +7,7 @@ public class IsStringValuePresentSpecification extends Specification<String> {
 
     private final boolean mustApplyTrim;
 
+
     public IsStringValuePresentSpecification(boolean mustApplyTrim) {
         super();
         this.mustApplyTrim = mustApplyTrim;
@@ -14,9 +15,9 @@ public class IsStringValuePresentSpecification extends Specification<String> {
 
     @Override
     public boolean isSatisfiedBy(String data) {
-        return !(mustApplyTrim)
-                ? TextHelper.isEmptyWithTrim(data)
-                    : TextHelper.isEmpty(data);
+        return mustApplyTrim
+                ? !TextHelper.isEmptyWithTrim(data)
+                : !TextHelper.isEmpty(data);
     }
 
 
