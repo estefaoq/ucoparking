@@ -11,6 +11,7 @@ import org.springframework.stereotype.Component;
 @Component
 public class ReserveParkingSpaceValidator implements Validator {
 
+
     @Override
     public void validate(Object... data) {
         var dto = (ReserveParkingSpaceDTO) data[0];
