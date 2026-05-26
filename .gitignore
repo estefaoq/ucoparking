@@ -1,0 +1,14 @@
+# Secretos — nunca subir
+infisical-secrets.env
+.infisical.json
+
+# Build
+target/
+
+# IDE
+.idea/
+*.iml
+.vscode/
+
+# Logs
+*.log

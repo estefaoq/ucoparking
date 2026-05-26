@@ -1,0 +1,73 @@
+package co.edu.uco.ucoparking.features.parkingspace.reserveparkingspace.application.usecase.domain;
+
+import java.util.UUID;
+
+public class ReserveParkingSpaceDomain {
+
+    private UUID id;
+    private Integer spaceNumber;
+    private String studentId;
+    private String studentName;
+    private String status;
+
+    public ReserveParkingSpaceDomain(Integer spaceNumber, String studentId, String studentName, String status) {
+        super();
+        generateId();
+        setSpaceNumber(spaceNumber);
+        setStudentId(studentId);
+        setStudentName(studentName);
+        setStatus(status);
+    }
+
+    private void setSpaceNumber(Integer spaceNumber) {
+        if (spaceNumber == null || spaceNumber <= 0) {
+            throw new IllegalArgumentException("El número de espacio es obligatorio y debe ser mayor a 0");
+        }
+        this.spaceNumber = spaceNumber;
+    }
+
+    private void setStudentId(String studentId) {
+        if (studentId == null || studentId.isBlank()) {
+            throw new IllegalArgumentException("El ID del estudiante es obligatorio");
+        }
+        this.studentId = studentId;
+    }
+
+    private void setStudentName(String studentName) {
+        if (studentName == null || studentName.isBlank()) {
+            throw new IllegalArgumentException("El nombre del estudiante es obligatorio");
+        }
+        this.studentName = studentName;
+    }
+
+    private void setStatus(String status) {
+        if (status == null || status.isBlank()) {
+            throw new IllegalArgumentException("El estado es obligatorio");
+        }
+        this.status = status;
+    }
+
+    private void generateId() {
+        this.id = UUID.randomUUID();
+    }
+
+    public UUID getId() {
+        return id;
+    }
+
+    public Integer getSpaceNumber() {
+        return spaceNumber;
+    }
+
+    public String getStudentId() {
+        return studentId;
+    }
+
+    public String getStudentName() {
+        return studentName;
+    }
+
+    public String getStatus() {
+        return status;
+    }
+}
